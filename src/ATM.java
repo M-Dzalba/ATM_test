@@ -1,6 +1,8 @@
 import java.util.Map;
 
 public class ATM {
+
+    private static final double ATM_LIMIT = 1000000.0;
     private final Map<String, Card> cardsMap;
     private int attempts;
 
@@ -76,7 +78,7 @@ public class ATM {
 
     public void withdraw(Card card, double amount) {
         double balance = card.getBalance();
-        if (amount <= balance) {
+        if (amount <= balance && amount <= ATM_LIMIT) {
             card.setBalance(balance - amount);
             System.out.println("Withdrawal successful. New balance: " + card.getBalance());
         } else {
@@ -85,7 +87,7 @@ public class ATM {
     }
 
     public void deposit(Card card, double amount) {
-        if (amount <= 1000000) {
+        if (amount <= ATM_LIMIT) {
             double balance = card.getBalance();
             card.setBalance(balance += amount);
             CardStorage.saveCards(cardsMap);
