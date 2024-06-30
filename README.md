@@ -9,6 +9,6 @@
 2. Запустить проект в IDE.
 3. Стартануть Main.class
 
-В файле [cards.txt](https://github.com/M-Dzalba/ATM_test/blob/main/cards.txt) сохранены карточки для проверки (в формате: номер крты пин-код баланс блокировка время).
+В файле [cards.txt](https://github.com/M-Dzalba/ATM_test/blob/main/cards.txt) сохранены карточки для проверки (в формате: номер_карты - пин_код - баланс - блокировка - время).
 
 [Техническое задание](https://github.com/M-Dzalba/ATM_test/blob/main/Technical%20task.txt).
